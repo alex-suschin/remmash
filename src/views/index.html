@@ -28,7 +28,102 @@
 </head>
 
 <body>
-    @@include("../blocks/modules/header/header.html") @@include("../blocks/modules/footer/footer.html")
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header-box">
+                    <a href="#" class="logo"><img src="../img/logo.svg" alt=""></a>
+                    <div class="cities">
+                        <span>Москва</span>
+                    </div>
+                    <ul class="top-menu">
+                        <li><a href="#">Цены</a></li>
+                        <li><a href="#">Акция</a></li>
+                        <li><a href="#">Как заказать</a></li>
+                    </ul>
+                    <a href="tel:+79255555874" class="phone">+7 925 555 58 74</a>
+                    <a href="#" class="btn">Перезвоните мне</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="top-wrap" style="background-image: url(../img/bg-wrap.png);">
+            <div class="container">
+                <div class="top-wrap-box">
+                    <div class="top-wrap-box__left">
+                        <div class="subtitle">Устраняем поломку <b>на месте</b></div>
+                        <div class="title">Ремонт стиральных машин <b>SMEG</b></div>
+                        <form action="/" method="post" class="form-top">
+                            <input type="hidden" value="Скидка 15%">
+                            <div class="form-title">Оставьте заявку на ремонт и получите <b>Скидку 15%</b></div>
+                            <div class="form-top-box">
+                                <span><input type="tel" placeholder="Ваш телефон"></span>
+                                <button type="submit" class="btn-submit">Оставить заявку</button>
+                            </div>
+
+                            <div class="agree">Нажимая кнопку “Оставить заявку”, я даю согласие на обработку персональных данных</div>
+                        </form>
+                    </div>
+                    <div class="top-wrap-box__right">
+                        <img src="../img/wash1.png" alt="">
+                    </div>
+                </div>
+                <div class="exs">
+                    <div class="exs-item">
+                        <div class="exs-item--img"><img src="../img/ex1.svg" alt=""></div>
+                        <div class="exs-item--text">Опытные мастера</div>
+                    </div>
+                    <div class="exs-item">
+                        <div class="exs-item--img"><img src="../img/ex2.svg" alt=""></div>
+                        <div class="exs-item--text">Бесплатный выезд</div>
+                    </div>
+                    <div class="exs-item">
+                        <div class="exs-item--img"><img src="../img/ex3.svg" alt=""></div>
+                        <div class="exs-item--text">Гарантия на работы </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="price">
+            <div class="container">
+                <div class="title">Какая неисправность стиральной машины?</div>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="price-item">
+                            <b>Не греет воду</b>
+                            <div class="price-item-table">
+                                <div class="price-item-table-row">
+                                    <div class="price-item-table-cell">Замена фильтра сливного насоса</div>
+                                    <div class="price-item-table-cell">700 ₽</div>
+                                </div>
+                                <div class="price-item-table-row">
+                                    <div class="price-item-table-cell">Замена датчика уровня воды</div>
+                                    <div class="price-item-table-cell">800 ₽</div>
+                                </div>
+                                <div class="price-item-table-row">
+                                    <div class="price-item-table-cell">Замена заливного клапана</div>
+                                    <div class="price-item-table-cell">350 ₽</div>
+                                </div>
+                                <div class="price-item-table-row">
+                                    <div class="price-item-table-cell">Устранение засора</div>
+                                    <div class="price-item-table-cell">450 ₽</div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn">Вызвать мастера</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+
+            </div>
+        </footer>
+
+    </div>
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
 </body>
