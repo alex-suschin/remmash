@@ -45,7 +45,23 @@ $(function() {
         $('#' + $(this).data('switch')).show(200);
     });
 
+    $(function() {
+        var topPos = $('.header').first().offset().top;
+        var HeightHeader = $('.header').outerHeight();
+        $(window).scroll(function() {
+            var top = $(document).scrollTop();
+            if (top > topPos) {
+                $('.header').addClass('fixed');
+                $('body').css('padding-top', HeightHeader);
+            } else {
+                $('.header').removeClass('fixed');
+                $('body').css('padding-top', '0');
+            }
+        });
+    });
+
     $(window).on('load resize scroll', function() {
+
 
         var width = $(window).width();
 

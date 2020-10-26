@@ -289,6 +289,16 @@ select {
     }
 }
 
+.header.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: #fff;
+    z-index: 99;
+}
+
 .header select {
     display: none;
 }
@@ -361,6 +371,27 @@ select {
     width: 24px;
     height: 24px;
     background: url(../img/phone.svg);
+}
+
+.header.fixed .btn,
+.header.fixed .cities {
+    display: none;
+}
+
+.header.fixed .top-menu li {
+    margin-right: 80px;
+}
+
+.header.fixed .phone {
+    margin: 0 12px 0 0;
+}
+
+.header.fixed .phone::before {
+    content: none;
+}
+
+.header.fixed .top-menu {
+    margin: 0 auto 0 83px;
 }
 
 .top-wrap {
