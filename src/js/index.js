@@ -38,12 +38,12 @@ $(function() {
 
     $('.cities-select').niceSelect();
 
-    // $('.style-tab').click(function() {
-    //     $('.style-tabs').find('.active').removeClass('active');
-    //     $(this).addClass('active');
-    //     $('.styles-elems').find('.styles-elem-item').hide();
-    //     $('#' + $(this).data('switch')).show();
-    // });
+    $('.advantage-button').click(function() {
+        $('.advantage-buttons').find('.active').removeClass('active');
+        $(this).addClass('active');
+        $('.advantage-circle-inner').find('.advantage-item').hide(200);
+        $('#' + $(this).data('switch')).show(200);
+    });
 
     $(window).on('load resize scroll', function() {
 
