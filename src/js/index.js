@@ -25,6 +25,23 @@ $(function() {
         return false;
     });
 
+    $('.anchor').click(function() {
+        var scroll_elem = $(this).attr('href');
+        if ($(scroll_elem).length != 0) {
+            $('html, body').animate({
+                scrollTop: $(scroll_elem).offset().top
+            }, 800);
+        } else {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 800);
+        }
+        return false;
+    });
+
+
+
+
     $('#hamburger-icon').click(function() {
         $(this).toggleClass('active');
         if ($(this).hasClass('active')) {
@@ -66,8 +83,19 @@ $(function() {
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
-        },
+        }
     });
+
+    const swiperPrev = document.getElementById('swiperPrev')
+    const swiperNext = document.getElementById('swiperNext')
+
+    swiperPrev.addEventListener('click', () => {
+        swiper.slidePrev();
+    })
+    swiperNext.addEventListener('click', () => {
+        swiper.slideNext();
+    })
+
 
     $(window).on('load resize scroll', function() {
 

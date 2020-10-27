@@ -28,7 +28,7 @@
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper" id="top">
         <header class="header">
             <div class="container">
                 <div class="header-box">
@@ -446,15 +446,39 @@
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="swiper-button-prev" id="swiperPrev"></div>
+                <div class="swiper-button-next" id="swiperNext"></div>
+            </div>
+        </div>
+
+        <div class="contacts">
+            <div class="container">
+                <div class="contacts-box">
+                    <div class="contacts-info">
+                        <div class="title">Свяжитесь с нами</div>
+                        <div class="desc">Оставьте заявку и мы перезвоним вам</div>
+                        <form action="/" method="post" class="form-contacts">
+                            <span><input type="tel" placeholder="Ваш телефон"></span>
+                            <button type="submit" class="btn">Оставить заявку</button>
+                            <div class="agree">Нажимая кнопку “Оставить заявку”, я даю согласие на обработку персональных данных</div>
+                        </form>
+                        <b>или позвоните нам </b>
+                        <a href="tel:+71111111111">+7 925 555 58 74</a>
+                    </div>
+                    <div class="map"></div>
                 </div>
             </div>
         </div>
 
         <footer class="footer">
             <div class="container">
-
+                <div class="footer-box">
+                    <a href="#" class="logo"><img src="../img/logo.svg" alt=""></a>
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Цены указанные на сайте не являются публичной офертой</a>
+                    <a href="#top" class="anchor"></a>
+                </div>
             </div>
         </footer>
 
