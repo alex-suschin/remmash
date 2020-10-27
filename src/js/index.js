@@ -11,7 +11,7 @@ $(function() {
 
     $("input[type=tel]").mask("+7 (999) 999-9999");
 
-    $('.scrollto').click(function() {
+    $('.top-menu a').click(function() {
         var scroll_elem = $(this).attr('href');
         if ($(scroll_elem).length != 0) {
             $('html, body').animate({
@@ -47,17 +47,26 @@ $(function() {
 
     $(function() {
         var topPos = $('.header').first().offset().top;
-        var HeightHeader = $('.header').outerHeight();
         $(window).scroll(function() {
             var top = $(document).scrollTop();
             if (top > topPos) {
                 $('.header').addClass('fixed');
+                var HeightHeader = $('.header').outerHeight();
                 $('body').css('padding-top', HeightHeader);
             } else {
                 $('.header').removeClass('fixed');
                 $('body').css('padding-top', '0');
             }
         });
+    });
+
+    var swiper = new Swiper('.rewiews-slider', {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
     });
 
     $(window).on('load resize scroll', function() {
