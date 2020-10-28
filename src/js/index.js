@@ -62,27 +62,20 @@ $(function() {
         $('#' + $(this).data('switch')).show(200);
     });
 
-    $(function() {
-        var topPos = $('.header').first().offset().top;
-        $(window).scroll(function() {
-            var top = $(document).scrollTop();
-            if (top > topPos) {
-                $('.header').addClass('fixed');
-                var HeightHeader = $('.header').outerHeight();
-                $('body').css('padding-top', HeightHeader);
-            } else {
-                $('.header').removeClass('fixed');
-                $('body').css('padding-top', '0');
-            }
-        });
-    });
+
 
     var swiper = new Swiper('.rewiews-slider', {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 30,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            }
         }
     });
 
@@ -104,13 +97,34 @@ $(function() {
     });
 
 
-    $(window).on('load resize scroll', function() {
+    $(window).on('load resize', function() {
 
 
         var width = $(window).width();
 
-        if ((width > '700') && (width < '1000')) {
+        if (width > '991') {
+            $(function() {
+                var topPos = $('.header').first().offset().top;
+                $(window).scroll(function() {
+                    var top = $(document).scrollTop();
+                    if (top > topPos) {
+                        $('.header').addClass('fixed');
+                        var HeightHeader = $('.header').outerHeight();
+                        $('body').css('padding-top', HeightHeader);
+                    } else {
+                        $('.header').removeClass('fixed');
+                        $('body').css('padding-top', '0');
+                    }
+                });
+            });
+        }
 
+        if (width < '992') {
+            $('.top-menu a').click(function() {
+                $('#hamburger-icon').removeClass('active');
+                $('.mob-menu').removeClass('active');
+                $('html').removeClass('ov-hidden');
+            });
         }
 
     });
