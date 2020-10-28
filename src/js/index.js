@@ -96,6 +96,13 @@ $(function() {
         swiper.slideNext();
     })
 
+    $('body').on('click', '[data-toggle="modal"]', function() {
+        var button = $(this);
+        var recipient = button.data('form');
+        var modal = $('#popup-callback');
+        modal.find('.hidden-input').val(recipient);
+    });
+
 
     $(window).on('load resize scroll', function() {
 
